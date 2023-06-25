@@ -1,0 +1,96 @@
+html, body{
+  background-color: #202020;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#header{
+  width: 100%;
+  height: 60px;
+  margin-bottom: 15px;
+}
+    #header_left, #header_right{
+      width: 60px;
+      height: 100%;
+      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+        #header_left > a{
+          width: 80%;
+          height: 80%;
+        }
+        #header_left > a > img{
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+    #header_center{
+      width: calc(100% - 120px);
+      height: 100%;
+      float: left;
+    }
+        #site_title, #site_link{
+          width: 100%;
+          height: 50%;
+          padding-left: 10px;
+          box-sizing: border-box;
+          display: flex;
+          word-break: break-all;    
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        #site_title{
+          align-items: flex-end;
+          padding-bottom: 3px;
+        }
+        #site_link{
+          padding-top: 3px;
+        }
+
+
+.image{
+  width: calc(100% / 4);
+  float: left;
+  object-fit: scale-down;
+  padding: 5px;
+  border: solid #6d6d6d6f 1px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+
+
+
+/* ------------------------------------------ */
+.css-selector {
+  background: linear-gradient(270deg, #d85eec, #5e93ec);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0%{background-position:1% 0%}
+  50%{background-position:99% 100%}
+  100%{background-position:1% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:1% 0%}
+  50%{background-position:99% 100%}
+  100%{background-position:1% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:1% 0%}
+  50%{background-position:99% 100%}
+  100%{background-position:1% 0%}
+}

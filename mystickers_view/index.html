@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.7.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Vue.Draggable/2.15.0/vuedraggable.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="background-color: transparent; color: #fff;">
+    <div id="header" class="css-selector">
+        <div id="header_left">
+            <img src="../common/site_logo.jpg" alt="Logo">
+        </div>
+        <div id="header_center">
+            <a><div id="site_title">最近開いた画像スタンプ一覧</div></a>
+            <a><div id="site_link">(プライベートモードの場合は記録されません。)</div></a>
+        </div>
+        <div id="header_right">
+            <div id="site_imgcount">Count</div>
+        </div>
+    </div>
+
+
+<div id="main">
+    <ul class="list-group drag p20">
+        <draggable :list="items" class="dragArea"
+                    :options="{animation:300, handle:'.handle'}">
+            <li class="list-group-item"
+                v-for="item, index in items"
+                :key="item.no" style="padding: unset; background-color: transparent; border: unset;">
+                <a :href="item.link">
+                    <img class="cover" :src="item.cover"></img>
+                    <div class="title">{{item.name}}</div>
+                    <span class="handle">
+                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                    </span>
+                </a>
+            </li>
+        </draggable>
+    </ul>
+</div>
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>
